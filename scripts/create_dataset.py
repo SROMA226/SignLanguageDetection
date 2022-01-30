@@ -16,7 +16,8 @@ np.random.seed(Config.RANDON_SEED)
 
 # Creer les dossier dont on a besoin dans ce script
 # ./assets/original_datasets & ./assets/data
-Config.ORIGINAL_DATASET_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
+Config.X_ORIGINAL_DATASET_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
+Config.Y_ORIGINAL_DATASET_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
 Config.DATASET_PATH.mkdir(parents=True, exist_ok=True)
 
 # Telecharge notre fichier
