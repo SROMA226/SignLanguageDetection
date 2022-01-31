@@ -5,3 +5,13 @@ stages:
     - scripts/create_dataset.py
     outs:
     - assets/data
+  data-preprocessing:
+    cmd: python scripts/pre_processing.py
+    deps:
+    - assets/data/x_test.npy
+    - assets/data/x_train.npy
+    - assets/data/y_test.npy
+    - assets/data/y_train.npy
+    - scripts/pre_processing.py
+    outs:
+    - assets/features

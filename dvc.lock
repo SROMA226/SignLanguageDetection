@@ -11,3 +11,26 @@ stages:
       md5: 490258eb9f001d73155d1e86cacbec1e.dir
       size: 33949280
       nfiles: 4
+  data-preprocessing:
+    cmd: python scripts/pre_processing.py
+    deps:
+    - path: assets/data/x_test.npy
+      md5: 5da1aedce281cc56204954c89ba672dc
+      size: 6766720
+    - path: assets/data/x_train.npy
+      md5: 2d84160efe61c46d30795765cfa02d2f
+      size: 27017344
+    - path: assets/data/y_test.npy
+      md5: 399a0d84e5b8e4e159643395e0e0484a
+      size: 33168
+    - path: assets/data/y_train.npy
+      md5: 9ce80de1c142e3324ff800eca03eae96
+      size: 132048
+    - path: scripts/pre_processing.py
+      md5: 6d5309d50c9b5c61a83c2f43d846bc08
+      size: 1962
+    outs:
+    - path: assets/features
+      md5: bfae7ad8a787c6e30700cd331dbddeb8.dir
+      size: 121005232
+      nfiles: 8
