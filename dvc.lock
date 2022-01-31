@@ -34,3 +34,20 @@ stages:
       md5: bfae7ad8a787c6e30700cd331dbddeb8.dir
       size: 121005232
       nfiles: 8
+  train-model-RF:
+    cmd: python scripts/train_model.py
+    deps:
+    - path: assets/features/x_train_features_ml.csv
+      md5: 65fa3d8e37f5bb3dfbfbc5e32f0de605
+      size: 69595186
+    - path: assets/features/y_train_labels_ml.npy
+      md5: a5e4823bb73ecfa31f031704a2cdc7c3
+      size: 13320
+    - path: scripts/train_model.py
+      md5: b6ddd937ac6e3989ce4b464f190588c2
+      size: 649
+    outs:
+    - path: assets/models
+      md5: fbeeb99c8f3bac40eacfca4186951c11.dir
+      size: 12290039
+      nfiles: 1
