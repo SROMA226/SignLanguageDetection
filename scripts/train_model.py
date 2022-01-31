@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 #from sklearn.svm import LinearSVC
 from sklearn.svm import SVC
+from sklearn.experimental import enable_halving_search_cv
 from sklearn.model_selection import HalvingRandomSearchCV
 
 from config import Config
