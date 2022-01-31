@@ -23,3 +23,12 @@ stages:
     - scripts/train_model.py
     outs:
     - assets/models
+  eval-model-RF:
+    cmd: python scripts/eval_model.py
+    deps:
+    - assets/features/x_test_features_ml.csv
+    - assets/features/y_test_labels_ml.npy
+    - assets/models/model.pk
+    - scripts/eval_model.py
+    outs:
+    - assets/metrics.json

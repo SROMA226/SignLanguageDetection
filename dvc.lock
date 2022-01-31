@@ -51,3 +51,22 @@ stages:
       md5: fbeeb99c8f3bac40eacfca4186951c11.dir
       size: 12290039
       nfiles: 1
+  eval-model-RF:
+    cmd: python scripts/eval_model.py
+    deps:
+    - path: assets/features/x_test_features_ml.csv
+      md5: 225becbc31f677146365593b40ad906c
+      size: 17444014
+    - path: assets/features/y_test_labels_ml.npy
+      md5: b217119bdfcc92c6df5751598fc556e8
+      size: 3432
+    - path: assets/models/model.pk
+      md5: f8aa78de002f7d869a7ad46c71066f56
+      size: 12290039
+    - path: scripts/eval_model.py
+      md5: d0b8878e1939bf289b16449cba7d7683
+      size: 1049
+    outs:
+    - path: assets/metrics.json
+      md5: e2bec8b9dde53b441f1be7bfee34d9bf
+      size: 139
