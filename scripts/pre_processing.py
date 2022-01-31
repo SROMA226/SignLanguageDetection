@@ -7,7 +7,7 @@ import numpy as np
 
 from config import Config
 
-#Config.FEATURES_PATH.mkdir(parents=True, exist_ok=True)
+Config.FEATURES_PATH.mkdir(parents=True, exist_ok=True)
 
 X_train = np.load(str(Config.DATASET_PATH / "x_train.npy"), allow_pickle=False)
 X_test = np.load(str(Config.DATASET_PATH / "x_test.npy"), allow_pickle=False)
