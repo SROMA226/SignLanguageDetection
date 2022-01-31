@@ -3,6 +3,7 @@
 # Enregistrer
 
 import pandas as pd
+import numpy as np
 
 from config import Config
 
@@ -36,15 +37,15 @@ Y_test_ML = np.array(pd.Series(Y_test.nonzero()[1]))
 
 
 # Enregistrement des features pour train et test
-X_train_CNN.save(str(Config.FEATURES_PATH / "x_train_features_cnn.npy"), index=None)
-X_test_CNN.save(str(Config.FEATURES_PATH / "x_test_features_cnn.npy"), index=None)
+np.save(str(Config.FEATURES_PATH / "x_train_features_cnn.npy"), X_train_CNN)
+np.save(str(Config.FEATURES_PATH / "x_test_features_cnn.npy"), X_test_CNN)
 
 X_train_ML.to_csv(str(Config.FEATURES_PATH / "x_train_features_ml.csv"), index=None)
 X_test_ML.to_csv(str(Config.FEATURES_PATH / "x_train_features_ml.csv"), index=None)
 
 # Enregistrement des labels pour train et test
-Y_train_CNN.save(str(Config.FEATURES_PATH / "y_train_labels_cnn.npy"), index=None)
-Y_test_CNN.save(str(Config.FEATURES_PATH / "y_test_labels_cnn.npy"), index=None)
+np.save(str(Config.FEATURES_PATH / "y_train_labels_cnn.npy"), Y_train_CNN)
+np.save(str(Config.FEATURES_PATH / "y_test_labels_cnn.npy"), Y_test_CNN)
 
 Y_train_ML.to_csv(str(Config.FEATURES_PATH / "y_train_labels_ml.csv"), index=None)
 Y_test_ML.to_csv(str(Config.FEATURES_PATH / "y_test_labels_ml.csv"), index=None)
