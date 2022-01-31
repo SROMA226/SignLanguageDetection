@@ -41,7 +41,7 @@ X_train, X_test, Y_train, Y_test= train_test_split(
     stratify=Y
 )
 
-X_train.save(str(Config.DATASET_PATH / "x_train.npy"), index=None)
-X_test.save(str(Config.DATASET_PATH / "x_test.npy"), index=None)
-Y_train.save(str(Config.DATASET_PATH / "y_train.npy"), index=None)
-Y_test.save(str(Config.DATASET_PATH / "y_test.npy"), index=None)
+np.save(str(Config.DATASET_PATH / "x_train.npy"), X_train)
+X_test.save(str(Config.DATASET_PATH / "x_test.npy"), X_test)
+Y_train.save(str(Config.DATASET_PATH / "y_train.npy"), Y_train)
+Y_test.save(str(Config.DATASET_PATH / "y_test.npy"), Y_test)

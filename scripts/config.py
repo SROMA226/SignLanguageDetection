@@ -1,7 +1,7 @@
 from pathlib import Path
 
 class Config:
-    RANDON_SEED = 28 # Seed
+    RANDON_SEED = 42 # Seed
     TEST_SIZE = 0.2
     ASSETS_PATH = Path("./assets")
     X_ORIGINAL_DATASET_FILE_PATH = ASSETS_PATH / "original_dataset" / "X.npy" # X_Dataset original
