@@ -1,9 +1,11 @@
 import pickle # Serialiser des objets (y comporis des modeles)
+import scipy
 
 import pandas as pd
 import numpy as np
 #from sklearn.svm import LinearSVC
-from sklearn.svm import SVC 
+from sklearn.svm import SVC
+from sklearn.model_selection import HalvingRandomSearchCV
 
 from config import Config
 
