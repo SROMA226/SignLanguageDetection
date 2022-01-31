@@ -41,11 +41,11 @@ np.save(str(Config.FEATURES_PATH / "x_train_features_cnn.npy"), X_train_CNN)
 np.save(str(Config.FEATURES_PATH / "x_test_features_cnn.npy"), X_test_CNN)
 
 X_train_ML.to_csv(str(Config.FEATURES_PATH / "x_train_features_ml.csv"), index=None)
-X_test_ML.to_csv(str(Config.FEATURES_PATH / "x_train_features_ml.csv"), index=None)
+X_test_ML.to_csv(str(Config.FEATURES_PATH / "x_test_features_ml.csv"), index=None)
 
 # Enregistrement des labels pour train et test
 np.save(str(Config.FEATURES_PATH / "y_train_labels_cnn.npy"), Y_train_CNN)
 np.save(str(Config.FEATURES_PATH / "y_test_labels_cnn.npy"), Y_test_CNN)
 
-Y_train_ML.to_csv(str(Config.FEATURES_PATH / "y_train_labels_ml.csv"), index=None)
-Y_test_ML.to_csv(str(Config.FEATURES_PATH / "y_test_labels_ml.csv"), index=None)
+np.save(str(Config.FEATURES_PATH / "y_train_labels_ml.npy"), Y_train_ML)
+np.save(str(Config.FEATURES_PATH / "y_test_labels_ml.npy"), Y_test_ML)
