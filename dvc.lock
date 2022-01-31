@@ -34,3 +34,20 @@ stages:
       md5: bfae7ad8a787c6e30700cd331dbddeb8.dir
       size: 121005232
       nfiles: 8
+  train-model-SVC:
+    cmd: python scripts/train_model.py
+    deps:
+    - path: assets/features/x_train_features_ml.csv
+      md5: 65fa3d8e37f5bb3dfbfbc5e32f0de605
+      size: 69595186
+    - path: assets/features/y_train_labels_ml.npy
+      md5: a5e4823bb73ecfa31f031704a2cdc7c3
+      size: 13320
+    - path: scripts/train_model.py
+      md5: 139c0966bbfc84662481b963bb17301b
+      size: 1088
+    outs:
+    - path: assets/models
+      md5: 51afa35edda310190eb99f4bf08cd599.dir
+      size: 50798397
+      nfiles: 1
