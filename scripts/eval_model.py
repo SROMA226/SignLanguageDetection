@@ -16,7 +16,7 @@ modelCNN = pickle.load(open(str(Config.MODELS_PATH / "model.pk"), mode='rb'))
 
 
 # Predict the values from the validation dataset
-Y_predictions = model.predict(X_test_CNN)
+Y_predictions = modelCNN.predict(X_test_CNN)
 # Convert predictions classes to one hot vectors 
 Y_pred_class = np.argmax(Y_predictions,axis = 1) 
 # Convert validation observations to one hot vectors
