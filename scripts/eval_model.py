@@ -24,7 +24,7 @@ Y_true = np.argmax(Y_test_CNN,axis = 1)
 
 #print(classification_report(Y_true, Y_pred_class))
 
-with open(str(Config.ASSETS_PATH)'/ metrique_cnn.txt', 'w') as f:
+with open(str(Config.ASSETS_PATH)+'/ metrique_cnn.txt', 'w') as f:
     f.write(classification_report(Y_true, Y_pred_class))
 
 y_pred = modelCNN.predict(X_test_CNN)
