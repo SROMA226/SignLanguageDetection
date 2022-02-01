@@ -2,6 +2,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, Dense, Flatten, MaxPooling2D
 from tensorflow.keras.optimizers import Adam
 
+import pickle # Serialiser des objets (y comporis des modeles)
+import scipy
+import numpy as np
+
 from config import Config
 
 Config.MODELS_PATH.mkdir(parents=True, exist_ok=True)
