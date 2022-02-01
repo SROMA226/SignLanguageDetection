@@ -44,10 +44,10 @@ stages:
       md5: 9ce80de1c142e3324ff800eca03eae96
       size: 132048
     - path: scripts/train_model.py
-      md5: f57fb3127b73b8784471bd46dc81df09
-      size: 1600
+      md5: 8407277c1cc284b52300e6d091f0b91f
+      size: 1591
     outs:
     - path: assets/models
-      md5: ef635e26042609f80c46cbeb2c01ba15.dir
-      size: 1896836
+      md5: 06660862d9da5d8dee899900865dada4.dir
+      size: 1894630
       nfiles: 1
