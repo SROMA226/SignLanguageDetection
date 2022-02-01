@@ -9,6 +9,10 @@ scikit-learn = "1.0.1"
 dvc = "2.9.2"
 gdown = "4.2.0"
 
+tensorflow = "2.7.0"
+tensorflow-estimator = "2.7.0"
+tensorflow-io-gcs-filesystem = "0.22.0"
+
 [dev-packages]
 isort = "5.10.1"
 
