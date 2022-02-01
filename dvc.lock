@@ -34,3 +34,20 @@ stages:
       md5: bfae7ad8a787c6e30700cd331dbddeb8.dir
       size: 121005232
       nfiles: 8
+  train-model-CNN:
+    cmd: python scripts/train_model.py
+    deps:
+    - path: assets/features/x_train_features_cnn.npy
+      md5: 6666c4b7081d4983ef856c3c41105845
+      size: 27017344
+    - path: assets/features/y_train_labels_cnn.npy
+      md5: 9ce80de1c142e3324ff800eca03eae96
+      size: 132048
+    - path: scripts/train_model.py
+      md5: f57fb3127b73b8784471bd46dc81df09
+      size: 1600
+    outs:
+    - path: assets/models
+      md5: ef635e26042609f80c46cbeb2c01ba15.dir
+      size: 1896836
+      nfiles: 1

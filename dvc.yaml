@@ -15,3 +15,11 @@ stages:
     - scripts/pre_processing.py
     outs:
     - assets/features
+  train-model-CNN:
+    cmd: python scripts/train_model.py
+    deps:
+    - assets/features/x_train_features_cnn.npy
+    - assets/features/y_train_labels_cnn.npy
+    - scripts/train_model.py
+    outs:
+    - assets/models
