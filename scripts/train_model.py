@@ -40,8 +40,8 @@ modelCNN.compile(loss="categorical_crossentropy",
               metrics=["accuracy"])
 
 #history = modelCNN.fit(X_train, y_train, epochs=100, batch_size=32, verbose=0, validation_data=(X_test, y_test))
-history = modelCNN.fit(X_train_CNN, Y_train_CNN, epochs=100, batch_size=32, verbose=0)
+modelCNN.fit(X_train_CNN, Y_train_CNN, epochs=100, batch_size=32, verbose=0)
 
 
 # Enregisrement du model
-pickle.dump(history, open(str(Config.MODELS_PATH / "model.pk"), mode='wb'))
+pickle.dump(modelCNN, open(str(Config.MODELS_PATH / "model.pk"), mode='wb'))
