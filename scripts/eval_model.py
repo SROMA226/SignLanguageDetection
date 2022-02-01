@@ -13,7 +13,7 @@ Y_test_CNN = np.load(str(Config.FEATURES_PATH / "y_test_labels_cnn.npy"), allow_
 # Restaurer le modèle
 modelCNN = pickle.load(open(str(Config.MODELS_PATH / "model.pk"), mode='rb'))
 
-va=history.history['val_accuracy'][-1]
+va=modelCNN.history['val_accuracy'][-1]
 
 """
 y_pred = modelCNN.predict(X_test_CNN)
