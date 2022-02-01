@@ -31,14 +31,3 @@ with open(str(Config.ASSETS_PATH)+'/ metrique_cnn.txt', 'w') as f:
 
 with open(str(Config.METRICS_FILE_PATH), mode='w') as f:
     json.dump(dict(validation_accuracy=evaluation[1]), f)
-
-"""
-y_pred = modelCNN.predict(X_test_CNN)
-test_fscore = f1_score(y_true=Y_test_CNN, y_pred=y_pred, average='weighted')
-test_precision = precision_score(y_true=Y_test_CNN, y_pred=y_pred, average='weighted')
-test_accuracy = accuracy_score(y_true=Y_test_CNN, y_pred=y_pred)
-test_recall = recall_score(y_true=Y_test_CNN, y_pred=y_pred, average='weighted')
-
-with open(str(Config.METRICS_FILE_PATH), mode='w') as f:
-    json.dump(dict(f1_score=test_fscore, precision=test_precision, recall_score=test_recall,accuracy_score=test_accuracy), f)
-"""
