@@ -51,3 +51,22 @@ stages:
       md5: 06660862d9da5d8dee899900865dada4.dir
       size: 1894630
       nfiles: 1
+  eval-model-CNN:
+    cmd: python scripts/eval_model.py
+    deps:
+    - path: assets/features/x_test_features_cnn.npy
+      md5: 3ff3cb5f2a301f12c07cb888a24ffa20
+      size: 6766720
+    - path: assets/features/y_test_labels_cnn.npy
+      md5: 399a0d84e5b8e4e159643395e0e0484a
+      size: 33168
+    - path: assets/models/model.pk
+      md5: 8b32365a2b1744faa44913858502c15a
+      size: 1894630
+    - path: scripts/eval_model.py
+      md5: 8afbf2bdad6b7cadd1657953b3c5d56b
+      size: 1703
+    outs:
+    - path: assets/metrics.json
+      md5: c4b525a2e8aad3a55d7f1658a00765fe
+      size: 43
