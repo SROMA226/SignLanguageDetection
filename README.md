@@ -40,14 +40,14 @@ L’objet d’étude est de construire un modèle pouvant reconnaître un chiffr
 
 ### RESULTATS
 * Evaluation du modèle RF
-    - Accuracy: 0.767
-    - F1-score: 0.764
+    - Accuracy: **0.767**
+    - F1-score: **0.764**
 * Evaluation du modèle SVC:
-    - Accuracy: 0.854
-    - F1-score: 0.853
+    - Accuracy: **0.854**
+    - F1-score: **0.853**
 * Evaluation du modèle CNN:
-    - Accuracy: 0.93
-    - F1-score: 0.93
+    - Accuracy: **0.93**
+    - F1-score: **0.93**
  
  ### LIENS UTILES
  - Dépot Github: https://github.com/SROMA226/SignLanguageDetection.git
