@@ -17,3 +17,22 @@ Les langues des signes sont les langues gestuelles (produites par les mouvements
 L’objet d’étude est de construire un modèle pouvant reconnaître un chiffre (0-9) à partir d’une image. Le dataset utilisé est constitué d’images représentant les chiffres mimés avec des doigts.
 
 #### VISUALISATION DES DONNÉES
+![Visualisation du dataset](sign1.png)
+
+### MATÉRIELS UTILISÉS
+1. GIT / GITHUB : pour le versioning du code python
+2. DVC / GDrive (Dossier distant): pour le versionning des données, des modèles
+
+### STRUCTURE DU PROJET
+* Branche **master**
+    - étape de création du dataset
+    - étape de prétraitement des données
+* Branche **master**
+    - étape de création du dataset
+    - étape de prétraitement des données
+* Branche **master**
+    - étape de création du dataset
+    - étape de prétraitement des données
+* Branche **master**
+    - étape de création du dataset
+    - étape de prétraitement des données
