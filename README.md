@@ -28,15 +28,15 @@ L’objet d’étude est de construire un modèle pouvant reconnaître un chiffr
 * Branche **master**
     - étape de création du dataset
     - étape de prétraitement des données
-* Branche **modele-ml**
-    - étape d'entrainement d'un modèle SVM (Support Vector Machine)
-    - étape d'évaluation du modèle
-* Branche **model-rf**
-    - étape d'entrainement d'un modèle RF (Random Forest Classifier)
-    - étape d'évaluation du modèle
-* Branche **modele-cnn**
-    - étape d'entrainement d'un réseau de neurones convolutifs (CNN)
-    - étape d'évaluation du modèle
+    * Branche **modele-ml**
+        - étape d'entrainement d'un modèle SVM (Support Vector Machine)
+        - étape d'évaluation du modèle
+    * Branche **model-rf**
+        - étape d'entrainement d'un modèle RF (Random Forest Classifier)
+        - étape d'évaluation du modèle
+    * Branche **modele-cnn**
+        - étape d'entrainement d'un réseau de neurones convolutifs (CNN)
+        - étape d'évaluation du modèle
 
 ### RESULTATS
 * Evaluation du modèle RF
