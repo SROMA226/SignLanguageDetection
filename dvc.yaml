@@ -15,3 +15,20 @@ stages:
     - scripts/pre_processing.py
     outs:
     - assets/features
+  train_model_ml:
+    cmd: python scripts/train_model.py
+    deps:
+    - assets/features/x_train_features_ml.csv
+    - assets/features/y_train_labels_ml.npy
+    - scripts/train_model.py
+    outs:
+    - assets/models/model_ml.pk
+  eval_model_ml:
+    cmd: python scripts/eval_model.py
+    deps:
+    - assets/features/x_test_features_ml.csv
+    - assets/features/y_test_labels_ml.npy
+    - assets/models/model_ml.pk
+    - scripts/eval_model.py
+    outs:
+    - assets/metrics.json

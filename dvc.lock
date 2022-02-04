@@ -34,3 +34,38 @@ stages:
       md5: bfae7ad8a787c6e30700cd331dbddeb8.dir
       size: 121005232
       nfiles: 8
+  train_model_ml:
+    cmd: python scripts/train_model.py
+    deps:
+    - path: assets/features/x_train_features_ml.csv
+      md5: 65fa3d8e37f5bb3dfbfbc5e32f0de605
+      size: 69595186
+    - path: assets/features/y_train_labels_ml.npy
+      md5: a5e4823bb73ecfa31f031704a2cdc7c3
+      size: 13320
+    - path: scripts/train_model.py
+      md5: abb7e528d3739d3c1e0abf9ba8b256d9
+      size: 674
+    outs:
+    - path: assets/models/model_ml.pk
+      md5: 42e70f39bc5d66134f839f77acd81ddc
+      size: 8178355
+  eval_model_ml:
+    cmd: python scripts/eval_model.py
+    deps:
+    - path: assets/features/x_test_features_ml.csv
+      md5: 225becbc31f677146365593b40ad906c
+      size: 17444014
+    - path: assets/features/y_test_labels_ml.npy
+      md5: b217119bdfcc92c6df5751598fc556e8
+      size: 3432
+    - path: assets/models/model_ml.pk
+      md5: 42e70f39bc5d66134f839f77acd81ddc
+      size: 8178355
+    - path: scripts/eval_model.py
+      md5: ec460d2d152b560669dc2963b2288b4d
+      size: 774
+    outs:
+    - path: assets/metrics.json
+      md5: d4f66e7a9dc804cecb496515e8ad3749
+      size: 65
