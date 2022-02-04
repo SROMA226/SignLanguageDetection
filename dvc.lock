@@ -69,3 +69,38 @@ stages:
     - path: assets/metrics.json
       md5: d4f66e7a9dc804cecb496515e8ad3749
       size: 65
+  train_model_cnn:
+    cmd: python scripts/train_cnn.py
+    deps:
+    - path: assets/features/x_train_features_cnn.npy
+      md5: 6666c4b7081d4983ef856c3c41105845
+      size: 27017344
+    - path: assets/features/y_train_labels_cnn.npy
+      md5: 9ce80de1c142e3324ff800eca03eae96
+      size: 132048
+    - path: scripts/train_cnn.py
+      md5: 2f911f5b480ccfbaae53bb0065210e81
+      size: 1919
+    outs:
+    - path: assets/models/model_cnn.pk
+      md5: 2afd5927ed407ab165a249567be63386
+      size: 58951910
+  eval_model_cnn:
+    cmd: python scripts/eval_cnn.py
+    deps:
+    - path: assets/features/x_test_features_cnn.npy
+      md5: 3ff3cb5f2a301f12c07cb888a24ffa20
+      size: 6766720
+    - path: assets/features/y_test_labels_cnn.npy
+      md5: 399a0d84e5b8e4e159643395e0e0484a
+      size: 33168
+    - path: assets/models/model_cnn.pk
+      md5: 2afd5927ed407ab165a249567be63386
+      size: 58951910
+    - path: scripts/eval_cnn.py
+      md5: 6fb98d162e341dc2c4c4b3cb15621adb
+      size: 676
+    outs:
+    - path: assets/metrics_cnn.json
+      md5: 485711e39eb28e4eb7e255913d771454
+      size: 59
